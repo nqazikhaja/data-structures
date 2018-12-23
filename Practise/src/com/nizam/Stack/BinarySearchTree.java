@@ -1,4 +1,4 @@
-package com.nizam.practise;
+package com.nizam.Stack;
 
 
 
