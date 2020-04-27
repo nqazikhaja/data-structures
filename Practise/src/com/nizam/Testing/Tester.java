@@ -32,6 +32,8 @@ public class Tester {
 		
 		//Have to do linked list
 		
+		System.out.println("This is for testing");
+		
 	}
 		
 }

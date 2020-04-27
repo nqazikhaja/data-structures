@@ -14,6 +14,15 @@ public class LinkedListTesting {
 		b.add(10);
 		b.printElements();
 		
-		System.out.println(b.contains(11));;
+		//System.out.println(b.contains(11));;
+		
+		//b.insertAt(2, 1);
+		//b.printElements();
+		System.out.println("Size of the list is "+b.size());
+		
+		b.remove(1);
+		b.printElements();
+		
+		System.out.println("Size of the list is "+b.size());
 	}
 }

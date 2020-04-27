@@ -43,6 +43,48 @@ public class BasicLinkedList<X> {
 		}
 		return itemRemoved;
 	}
+	
+//Method to insert at certain postion in a list
+public void insertAt(X item, int postion) {
+	if(size() < postion)
+		throw new IllegalAccessError("postion outside of list size");
+	
+Node currentNode = head;
+
+for(int i =1; i<postion&&currentNode !=null;i++) {
+	currentNode = currentNode.getNextNode();
+	
+}
+	Node newNode = new Node(item);
+	Node nextNode = currentNode.getNextNode();
+	currentNode.setNextNode(newNode);
+	newNode.setNextNode(nextNode);
+	counter++;
+		
+}
+
+//Method to remove the element at particular position
+public X remove(int postion) {
+	
+	if(size()<postion)
+		throw new IllegalAccessError("position is out of linked list");
+	
+	Node currentNode = head;
+	
+	for(int i=1; i<postion && currentNode!=null;i++) {
+		currentNode = currentNode.getNextNode();
+		
+	}
+	
+	X nodeToBeRemoved = (X) currentNode.getNextNode();
+	Node nextNodeAfterRemoval = ((Node) nodeToBeRemoved).getNextNode();
+	currentNode.setNextNode(nextNodeAfterRemoval);
+	//nodeToBeRemoved=null;
+	counter--;
+	
+	
+	return nodeToBeRemoved;
+}
 
 //Method to traverse through Linked List and print elements
 	public void printElements() {
