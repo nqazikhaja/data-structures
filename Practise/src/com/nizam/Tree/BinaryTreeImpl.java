@@ -22,8 +22,18 @@ public class BinaryTreeImpl {
 		
 		
 		bTree.inOrderTraversalIterative(bTree.root);
+		System.out.println("-------------------");
+		bTree.inOrderRecursive(bTree.root);
 		
 		bTree.preOrderTraversalIterative(bTree);
+		System.out.println("-------------------");
+		bTree.preOrderRecursive(bTree.root);
+		
+		
+		
+		bTree.postOrderTraversalIterative(bTree);
+		System.out.println("-------------------");
+		bTree.postOrderRecursive(bTree.root);
 		
 	}
 

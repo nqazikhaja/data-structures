@@ -86,8 +86,36 @@ public class BinaryTree {
 		}
 	}
 	
-	
+	// Left,Root,Right
+	public void inOrderRecursive(Node root) {
+		if (root == null)
+			return;
 
+		inOrderRecursive(root.left);
+		System.out.println(root.data);
+		inOrderRecursive(root.right);
+	}
+
+	// left,right,root
+	public void postOrderRecursive(Node root) {
+		if (root == null)
+			return;
+
+		postOrderRecursive(root.left);
+		postOrderRecursive(root.right);
+		System.out.println(root.data);
+	}
+
+	// Root,left,right
+	public void preOrderRecursive(Node root) {
+		if (root == null)
+			return;
+
+		System.out.println(root.data);
+		preOrderRecursive(root.left);
+		preOrderRecursive(root.right);
+
+	}
 
 }
 
